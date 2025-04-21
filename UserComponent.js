@@ -196,7 +196,102 @@ function App(){
     <div className="App">
         <h1>Props in React :)</h1>
         <Student name={name} />
-        <button onCLick={()=>{setName("sidh")}}>Update Name</button>
+        <button onCLick={()=>{setName("sidhu")}}>Update Name</button>
+    </div>
+  );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+import React from 'react'
+class App extends React.Component{
+  constructor(){
+    super();
+    this.state={
+      name:"anil"
+    }
+  }
+  render(){
+    return (
+      <div className="App">
+        <h1>Props!</h1>
+        <Student name={this.props.name} email="anil@test.com" />
+        <button onClick={()=>this.setState({name:"sidhu"})}>Update Name</button>
+      </div>
+    );
+  }
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+import React,{useState} from 'react'
+function App(){
+  const [data,setData]=useState(null)
+  const [print,setPrint]=useState(false)
+    function getData(val){
+      console.warn(val.target.value)
+      setData(val.target.value)
+      setPrint(false)
+    }
+    return (
+      <div className="App">
+        {
+          print?
+          <h1>{data}</h1>
+          :null
+        }
+        <input type="text" onChange={getData} />
+        <button onClick={()=>setPrint(true)}>Print Data</button>
+      </div>
+    );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+import React from 'react'
+function App(){
+  const [status,setStatus]=React.useState(true)
+  return (
+    <div className="App">
+      {
+        status? <h1>Hello World!</h1>:null
+      }
+      <button onClick={()=>setStatus(false)}>Hide</button>
+      <button onClick={()=>setStatus(true)}>Show</button>
+    </div>
+  );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+import {useState} from 'react'
+function App(){
+  const [name,setName]=useState("");
+  const [tnc,setTNC]=useState(false);
+  const [interest,setInterest]=useState("");
+  function getFormData(e){
+    console.warn(name,tnc,interest)
+    e.preventDefault()
+  }
+  return (
+    <div className="App">
+      <h1>Handle Form in React</h1>
+      <form onSubmit={getFormData)>
+        <input type="text" placeholder="enter name" value={name} onChange={(e)=>setName(e.target.value)} /> <br /><br />
+        <select onChange={(e)=>setInterest(e.target.value)}>
+          <option>Select Options</option>
+          <option>Marvel</option>
+          <option>DC</option>
+        </select> <br /><br />
+        <input type="checkbox" onChange={(e)=>setTNC(e.target.checked)} /><span>Accept Terms and Conditions</span>
+        <br /><br />
+        <button type="submit">Submit</button>
+        <button>Clear</button>
+      </form>
     </div>
   );
 }
