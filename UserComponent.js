@@ -159,3 +159,45 @@ class App extends Component {
   }
 }
 export default App;
+
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student'
+function App(){
+  return(
+    <div className="App">
+        <h1>Props in React :)</h1>
+        <Student name={"anil"} />
+    </div>
+  );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student'
+function App(){
+  return(
+    <div className="App">
+        <h1>Props in React :)</h1>
+        <Student name={"anil"} email="anil@test.com" />
+    </div>
+  );
+}
+export default App;
+
+import React,{useState} from 'react'
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student'
+function App(){
+  const [name,setName]=useState("anil")
+  return(
+    <div className="App">
+        <h1>Props in React :)</h1>
+        <Student name={name} />
+        <button onCLick={()=>{setName("sidh")}}>Update Name</button>
+    </div>
+  );
+}
+export default App;
