@@ -1,0 +1,161 @@
+import logo from './logo.svg';
+import './App.css';
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello World!</h1>
+      <User />
+    </div>
+  );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+import User from './User'
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello World!</h1>
+      <User />
+    </div>
+  );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+import User from './User'
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello World!</h1>
+      <User />
+    </div>
+  );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+import User from './User'
+function App() {
+  return (
+    <div className="App">
+      <h1>JSX!</h1>
+      <User />
+    </div>
+  );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+function App() {
+  function apple() {
+    alert("function called");
+  }
+  return (
+    <div className="App">
+      <h1>Hello World!</h1>
+      <button onClick={apple()}>Click me</button>
+    </div>
+  );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+function App() {
+  function apple() {
+    alert("function called");
+  }
+  return (
+    <div className="App">
+      <h1>Hello World!</h1>
+      <button onClick={()=>alert("hello")}>Click me</button>
+    </div>
+  );
+}
+export default App;
+
+import logo from './logo.svg';
+import './App.css';
+function App() {
+  let data = anil sidhu"
+  function apple() {
+    alert(data);
+  }
+  return (
+    <div className="App">
+      <h1>{data}</h1>
+      <button onClick={()=>alert("hello")}>Click me</button>
+    </div>
+  );
+}
+export default App;
+
+import {useState} from 'react'
+import logo from './logo.svg';
+import './App.css';
+function App() {
+  const [data,setData]=useState("anil")
+  function updateData(){
+    setData("sidhu")
+  }
+  return (
+    <div className="App">
+      <h1>{data}</h1>
+      <button onClick={updateData}>Update Data</button>
+    </div>
+  );
+}
+export default App;
+
+import React,{Component} from 'react'
+import logo from './logo.svg';
+import './App.css';
+class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      data:"anil"
+    }
+  }
+  apple(){
+    this.setState({data:"sidhu"})
+  }
+  render(){
+    return (
+      <div className="App">
+        <h1>{this.state.data}</h1>
+        <button onClick={()=>this.apple()}>Update Data</button>
+      </div>
+    );
+  }
+}
+export default App;
+
+import React,{Component} from 'react'
+import logo from './logo.svg';
+import './App.css';
+class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      data:1
+    }
+  }
+  apple(){
+    this.setState({data:this.state.data+1})
+  }
+  render(){
+    return (
+      <div className="App">
+        <h1>{this.state.data}</h1>
+        <button onClick={()=>this.apple()}>Update Data</button>
+      </div>
+    );
+  }
+}
+export default App;
