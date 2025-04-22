@@ -4,7 +4,7 @@ function Profile(){
   if(loggedIn){
     return (
       <div>
-        {loggedIn==1?<h1>Welcome User 1</h1>:loggedIn==2?<h1>Welcome User 2</h1>:<h1>Welcome Guest</h1>
+        {loggedIn==1?<h1>Welcome User 1</h1>:loggedIn==2?<h1>Welcome User 2</h1>:<h1>Welcome Guest</h1>}
       </div>
     );
   }
