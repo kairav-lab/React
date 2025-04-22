@@ -1,6 +1,6 @@
 import {useState} from 'react'
 function Profile(){
-  const [loggedIn,setLoggedIn]=useState(truecm)
+  const [loggedIn,setLoggedIn]=useState(true)
   if(loggedIn){
     return (
       <div>
